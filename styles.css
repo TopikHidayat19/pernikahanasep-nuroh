@@ -803,3 +803,52 @@ body {
     font-size: 16px;
     margin-top: 10px;
 }
+
+.payment-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.payment-options img {
+    width: 50px;
+    height: 50px; /* Ukuran yang konsisten */
+    object-fit: contain; /* Menjaga rasio gambar */
+    cursor: pointer;
+    transition: transform 0.3s;
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar kotak */
+    max-height: 100%; /* Memastikan gambar tidak melebihi tinggi kotak */
+    box-sizing: border-box; /* Agar padding dan border tidak menambah ukuran gambar */
+}
+
+.payment-options img:hover {
+    transform: scale(1.1);
+}
+
+/* Mengatur ukuran dan posisi logo dalam modal */
+.payment-logo {
+    width: 100px; /* Ukuran tetap */
+    height: 100px; /* Ukuran tetap */
+    object-fit: contain; /* Menjaga rasio gambar */
+    margin-bottom: 20px;
+    max-width: 100%; /* Memastikan logo tidak keluar kotak */
+    max-height: 100%; /* Memastikan logo tidak keluar kotak */
+}
+
+#paymentName {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.account-number {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Styling modal agar tidak terlewat atau keluar dari batas */
+.modal-content {
+    overflow: hidden; /* Menghindari elemen keluar dari batas modal */
+    padding: 20px;
+    position: relative;
+}
