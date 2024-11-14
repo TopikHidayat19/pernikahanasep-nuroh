@@ -75,5 +75,55 @@ function copyAccountNumber() {
         document.getElementById("copyMessage").style.display = "block";
     });
 }
+// Fungsi membuka modal pilihan pembayaran
+function openModal() {
+    document.getElementById('choosePaymentModal').style.display = 'block';
+}
+
+// Fungsi menutup modal pilihan pembayaran
+function closeChoosePaymentModal() {
+    document.getElementById('choosePaymentModal').style.display = 'none';
+}
+// Fungsi untuk menampilkan modal dengan informasi akun sesuai pilihan
+function showGiftModal(paymentMethod) {
+    // Tutup modal pilihan pembayaran
+    closeChoosePaymentModal();
+    
+    // Tentukan logo, nama, dan nomor rekening berdasarkan metode pembayaran yang dipilih
+    let paymentLogo = document.getElementById('paymentLogo');
+    let paymentName = document.getElementById('paymentName');
+    let accountNumber = document.getElementById('accountNumber');
+    
+    switch (paymentMethod) {
+        case 'BCA':
+            paymentLogo.src = 'foto/bca-online-digital-printing-company-jakarta-mediakreasi-12.png';
+            paymentName.textContent = 'NUROH';
+            accountNumber.textContent = '5421283771';
+            break;
+        case 'BRI':
+            paymentLogo.src = 'foto/p-2812-9-bank-mandiri-logo-png-transparent-logo-291867162208.png';
+            paymentName.textContent = 'ASEP SAEPULLAH';
+            accountNumber.textContent = '1630007875993';
+            break;
+        case 'Dana':
+            paymentLogo.src = 'foto/Logo ShopeePay.png';
+            paymentName.textContent = 'NUROH';
+            accountNumber.textContent = '085774794972';
+            break;
+        case 'Gopay':
+            paymentLogo.src = 'foto/Logo Link Aja!.png';
+            paymentName.textContent = 'NUROH';
+            accountNumber.textContent = '085774794972';
+            break;
+        default:
+            paymentLogo.src = 'foto/bca-logo.png';
+            paymentName.textContent = 'TOPIK';
+            accountNumber.textContent = '////';
+    }
+
+    // Tampilkan modal informasi rekening
+    document.getElementById('giftModal').style.display = 'block';
+}
+
 
 displayWishes();  // Menampilkan ucapan yang sudah ada saat pertama kali halaman dimuat
