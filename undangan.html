@@ -80,36 +80,33 @@
         <button onclick="openModal()">🎁 Send Gift</button>
     </section>
 
-    <!-- Virtual Blessings Section -->
-    <section class="virtual-blessings-section">
-        <h4>Virtual Blessings</h4>
-        <!-- Fitur Send Wishes -->
-        <div class="sedwhish">
-            <div class="container">
-                <div class="title">Send Wishes</div>
-                <div class="wishes" id="wishes"></div>
-                <div class="submit-wish">
-                    <input type="text" id="nameInput" placeholder="Your name"><br>
-                    <textarea id="wishInput" placeholder="Write your wish here..."></textarea><br>
-                    <button onclick="submitWish()">Submit</button>
-                </div>
-            </div>
-        </div>
-        
-    </section>
-
-    <!-- Modal for BCA Virtual Account Information -->
-    <div id="giftModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Thank you for your virtual blessing!</h3>
-            <img src="foto/p-2812-9-bank-mandiri-logo-png-transparent-logo-291867162208.png" alt="BCA Logo" class="bca-logo">
-            <p class="username">ASEP SAEPULLAH </p>
-            <p class="account-number">Account Number: <span id="accountNumber">1630007875993</span></p>
-            <button onclick="copyAccountNumber()">Copy Account Number</button>
-            <p id="copyMessage">Account number copied!</p>
+<!-- Modal for Choosing Payment Method -->
+<div id="choosePaymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeChoosePaymentModal()">&times;</span>
+        <h3>Select Payment Method</h3>
+        <div class="payment-options">
+            <img src="foto/bca-online-digital-printing-company-jakarta-mediakreasi-12.png" alt="BCA" onclick="showGiftModal('BCA')">
+            <img src="foto/p-2812-9-bank-mandiri-logo-png-transparent-logo-291867162208.png" alt="Mandiri" onclick="showGiftModal('BRI')">
+            <img src="foto/Logo ShopeePay.png" alt="Shopee" onclick="showGiftModal('Dana')">
+            <img src="foto/Logo Link Aja!.png" alt="Link aja" onclick="showGiftModal('Gopay')">
         </div>
     </div>
+</div>
+
+<!-- Modal for Showing Account Information -->
+<div id="giftModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Thank you for your virtual blessing!</h3>
+        <img id="paymentLogo" src="foto/bca-logo.png" alt="Payment Logo" class="payment-logo">
+        <p id="paymentName">Aditt</p>
+        <p class="account-number">Account Number: <span id="accountNumber">1630007875993</span></p>
+        <button onclick="copyAccountNumber()">Copy Account Number</button>
+        <p id="copyMessage" style="display: none;">Account number copied!</p>
+    </div>
+</div>
+
 
     <div class="social-links">
         <p>Made by: TOPIK HIDAYAT</p>
