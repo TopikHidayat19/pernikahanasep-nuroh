@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Asep & Nuroh</title>
+    <link rel="stylesheet" href="utama.css">
+</head>
+<body>
+    <!-- Section Foto Utama dan Judul Pernikahan -->
+    <section class="hero">
+        <img src="foto/berdiri.jpg" alt="Foto Pernikahan Asep dan Nuroh">
+        <div class="overlay">
+            <h1>Asep & Nuroh</h1>
+            <p>WE ARE GETTING MARRIED</p>
+            <button class="invitation-button" onclick="openInvitation()">Surat Undangan</button>
+        </div>
+    </section>
+
+    <!-- Audio untuk musik dengan autoplay -->
+    <audio id="weddingMusic" src="xxaudio/Spring-Flowers(chosic.com).mp3" type="audio/mp3" autoplay></audio>
+
+    <script>
+        function openInvitation() {
+            // Mengarahkan ke halaman undangan
+            window.location.href = 'undangan.html';
+        }
+    </script>
+</body>
+</html>

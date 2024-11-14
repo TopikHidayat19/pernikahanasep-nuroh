@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <!-- Menyertakan font dari Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Menyertakan file CSS eksternal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="background-video">
+        <source src="foto/WhatsApp Video 2024-11-13 at 20.58.48_bf3ddd67.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Foto Pasangan -->
+    <section class="couple-section">
+        <div class="profile">
+            <img src="foto/1731584770485.jpg" alt="Foto Asep">
+            <h2>ASEP SAEPULLAH</h2>
+            <p>Putra ke -4 Bpk.H Barmawi(Alm) & Ibu H Jubaedah</p>
+            <a href="https://www.instagram.com/asepsaepullah99?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Ikon Instagram -->
+            </a>
+        </div>
+        <div class="profile">
+            <img src="foto/1731584830064.jpg" alt="Foto Nuroh">
+            <h2>NUROH</h2>
+            <p>Putri ke -3 Bpk.Hamat(Husni) & Ibu Yati</p>
+            <a href="https://www.instagram.com/nuroh16042000?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Ikon Instagram -->
+            </a>
+        </div>
+    </section>      
+
+    <!-- Countdown Timer -->
+    <section class="countdown-section">
+        <h3>Counting Down</h3>
+        <div id="countdown">
+            <span id="days">00</span> Hari
+            <span id="hours">00</span> Jam
+            <span id="minutes">00</span> Menit
+            <span id="seconds">00</span> Detik
+        </div>
+        <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=RESEPSI+PERNIKAHAN+Asep+dan+Nuroh&dates=20241124T020000Z/20241124T100000Z&details=Resepsi+pernikahan+Asep+dan+Nuroh+di+Kediaman+Mempelai+Wanita,+Kp.+Sarongge+RT.001/RW.002+Desa+PasirKembang+Kec.+Maja+Kab.+Lebak-Banten.&location=Kp.+Sarongge+RT.001/RW.002+Desa+PasirKembang+Kec.+Maja+Kab.+Lebak-Banten" target="_blank">
+            <button>Add to Google Calendar</button>
+        </a>
+    </section>
+
+    <!-- Keterangan Acara -->
+    <section class="event-details">
+        <h4>RESEPSI PERNIKAHAN</h4>
+        <p>Tanggal: 24 November 2024</p>
+        <p>Pukul 09:00 WIB s/d Selesai</p>
+        <p>Bertempat: (Kediaman Mempelai Wanita)</p>
+        <p>Kp. Sarongge RT.001/RW.002 Desa PasirKembang Kec. Maja Kab. Lebak-Banten</p>
+        <a href="https://maps.app.goo.gl/efAB4vAYAB8PfNueA" target="_blank">Lihat Lokasi</a>
+    </section>
+
+    <section class="our-story-section">
+        <h2>Our Story</h2>
+        <div class="photo-gallery">
+            <img src="foto/berdiri.jpg" alt="Photo 1">
+            <img src="foto/berdiri2.jpg" alt="Photo 2">
+            <img src="foto/duduk2.jpg" alt="Photo 3">
+            <img src="foto/dudukkursi.jpg" alt="Photo 4">
+        </div>
+    </section>
+
+    <!-- Section Virtual Blessings -->
+    <section class="virtual-blessings-section">
+        <h2>Virtual Blessings</h2>
+        <p>Hopefully this limitation does not reduce happiness for both of us and does not eliminate the blessings from all of you. Your prayer for our marriage is the greatest gift of all.</p>
+        <button onclick="openModal()">🎁 Send Gift</button>
+    </section>
+
+    <!-- Virtual Blessings Section -->
+    <section class="virtual-blessings-section">
+        <h4>Virtual Blessings</h4>
+        <!-- Fitur Send Wishes -->
+        <div class="sedwhish">
+            <div class="container">
+                <div class="title">Send Wishes</div>
+                <div class="wishes" id="wishes"></div>
+                <div class="submit-wish">
+                    <input type="text" id="nameInput" placeholder="Your name"><br>
+                    <textarea id="wishInput" placeholder="Write your wish here..."></textarea><br>
+                    <button onclick="submitWish()">Submit</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- Modal for BCA Virtual Account Information -->
+    <div id="giftModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Thank you for your virtual blessing!</h3>
+            <img src="foto/p-2812-9-bank-mandiri-logo-png-transparent-logo-291867162208.png" alt="BCA Logo" class="bca-logo">
+            <p class="username">ASEP SAEPULLAH </p>
+            <p class="account-number">Account Number: <span id="accountNumber">1630007875993</span></p>
+            <button onclick="copyAccountNumber()">Copy Account Number</button>
+            <p id="copyMessage">Account number copied!</p>
+        </div>
+    </div>
+
+    <div class="social-links">
+        <p>Made by: TOPIK HIDAYAT</p>
+        <a href="https://www.instagram.com/taufik_xp/profilecard/?igsh=YzB4YndlaGVlcHE5" target="_blank">
+            <i class="fab fa-instagram social-icon"></i>
+        </a>
+        <a href="https://wa.me/6281285103801" target="_blank">
+            <i class="fab fa-whatsapp social-icon"></i>
+        </a>
+        <a href="https://x.com/Taufikbenzoyo" target="_blank">
+            <i class="fab fa-twitter social-icon"></i>
+        </a>
+    </div>
+    
+    
+    <audio id="weddingMusic" src="audio/Spring-Flowers(chosic.com).mp3" type="audio/mp3" autoplay></audio>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 50
+                },
+                "size": {
+                    "value": 3
+                },
+                "move": {
+                    "speed": 1
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    }
+                }
+            }
+        });
+
+        // Menambahkan kelas 'active' pada elemen yang di-scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.slide-up');
+            const scrollPosition = window.scrollY;
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                if (elementPosition < window.innerHeight) {
+                    element.classList.add('active');
+                } else {
+                    element.classList.remove('active');
+                }
+            });
+        });
+
+        // Fungsi membuka modal
+        function openModal() {
+            document.getElementById('giftModal').style.display = 'block';
+        }
+
+        // Fungsi menutup modal
+        function closeModal() {
+            document.getElementById('giftModal').style.display = 'none';
+        }
+
+        // Fungsi untuk menyalin nomor rekening
+        function copyAccountNumber() {
+            var copyText = document.getElementById('accountNumber');
+            navigator.clipboard.writeText(copyText.textContent);
+            document.getElementById('copyMessage').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('copyMessage').style.display = 'none';
+            }, 2000);
+        }
+
+        // Fungsi untuk mengirimkan ucapan
+        function submitWish() {
+            const name = document.getElementById('nameInput').value;
+            const wish = document.getElementById('wishInput').value;
+
+            if (name && wish) {
+                const wishDiv = document.createElement('div');
+                wishDiv.classList.add('wish');
+                wishDiv.innerHTML = `<strong>${name}:</strong> ${wish}`;
+                document.getElementById('wishes').appendChild(wishDiv);
+
+                // Kosongkan input setelah wish disubmit
+                document.getElementById('nameInput').value = '';
+                document.getElementById('wishInput').value = '';
+            } else {
+                alert('Please enter both name and wish.');
+            }
+        }
+    </script>
+
+    <!-- Menyertakan file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
